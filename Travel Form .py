@@ -6,6 +6,14 @@ root.configure(bg='lightcoral')
 root.title("KEEP EXPLORING")
 def getvals():
     print("It works!")
+     print(f"{namevalue.get(), phonevalue.get(), gendervalue.get(), emergencyvalue.get(), paymentmodevalue.get(), foodservicevalue.get()} ")
+
+
+
+    with open("records.txt", "a") as f:
+        f.write(f"{namevalue.get(), phonevalue.get(), gendervalue.get(), emergencyvalue.get(), paymentmodevalue.get(), foodservicevalue.get()}\n ")
+
+
 root.geometry("444x544")
 root.maxsize(444,544)
 Label(root, text="Explore Your  Dream Destination ", font="comicsansms 13 italic", pady=15,background="lightcoral").grid(row=0, column=3)
